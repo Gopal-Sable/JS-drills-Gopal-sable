@@ -70,12 +70,12 @@ function objectAt(arr, index) {
     return "Empty array or not an array";
   }
 
-  if (!Number.isInteger(index)  || index==-1 || index>=arr.length) {
+  if (!Number.isInteger(index)  || index<=0 || index>=arr.length) {
     return "Invalid index";
   }
 
   const result = arr
-    .filter((element, idx) => idx == index-1)
+    .filter((element, idx) => idx == index)
     .map((element) => ({ name: element.name, city: element.city }));
   return result;
 }
