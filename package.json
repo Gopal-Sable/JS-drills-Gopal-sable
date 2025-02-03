@@ -1,0 +1,12 @@
+{
+  "name": "js-drill",
+  "version": "1.0.0",
+  "main": "persons.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gopal Sable",
+  "license": "ISC",
+  "description": "This is JavaScript drill"
+}
