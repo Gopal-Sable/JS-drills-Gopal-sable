@@ -75,7 +75,7 @@ function objectAt(arr, index) {
   }
 
   const result = arr
-    .filter((element, idx) => idx == index)
+    .filter((element, idx) => idx == index-1)
     .map((element) => ({ name: element.name, city: element.city }));
   return result;
 }
