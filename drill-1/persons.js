@@ -102,3 +102,4 @@ const arrayOfObjects = [
   }
 ];
 
+ export default arrayOfObjects;
