@@ -59,7 +59,7 @@ function getGroupsByProgram(users) {
     return "Please provide a object";
   }
 
-  let data = {}; //[["Golang"],["JavaScript"], ["Python"]];
+  let data = {}; 
   for (const user in users) {
     users[user].desgination.split(" ").map((language) => {
       if (["Golang", "Javascript", "Python"].includes(language)) {
