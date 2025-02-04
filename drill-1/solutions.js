@@ -1,11 +1,10 @@
-
 function isValidArr(arr) {
   if (!Array.isArray(arr)) {
     return false;
   }
-  if (arr.length == 0){
+  if (arr.length == 0) {
     return false;
-  } 
+  }
   return true;
 }
 
@@ -30,17 +29,17 @@ function hobbiesOfAge(arr, age) {
     if (!isValidArr(arr)) {
       return "Empty array or not an array";
     }
-  
-    if (isNaN(age) || age==null) {
+
+    if (isNaN(age) || age == null) {
       return "Invalid Age";
     }
-    
+
     const hobbies = arr
       .filter((hobby) => hobby.age == age)
       .map((hobby) => hobby.hobbies);
 
     if (hobbies.empty) {
-      return "No data found"
+      return "No data found";
     }
     return hobbies;
   } catch (error) {
@@ -53,7 +52,7 @@ function isStudentLivesIn(arr, country) {
   if (!isValidArr(arr)) {
     return "Empty array or not an array";
   }
-  if (country == undefined || country==null) {
+  if (country == undefined || country == null) {
     return "Provide a country name";
   }
 
@@ -70,7 +69,7 @@ function objectAt(arr, index) {
     return "Empty array or not an array";
   }
 
-  if (!Number.isInteger(index)  || index<=0 || index>=arr.length) {
+  if (!Number.isInteger(index) || index <= 0 || index >= arr.length) {
     return "Invalid index";
   }
 
@@ -85,9 +84,9 @@ function getAges(arr) {
   if (!isValidArr(arr)) {
     return "Empty array or not an array";
   }
-  const result= arr.map((person) => person.age);
-  if (result.length==0) {
-    return "No result found"
+  const result = arr.map((person) => person.age);
+  if (result.length == 0) {
+    return "No result found";
   }
   return result;
 }
@@ -112,7 +111,7 @@ function getNameAndEmail(arr, age) {
   if (!Number.isInteger(age)) {
     return "Invalid Age";
   }
-  
+
   const result = arr
     .filter((element) => element.age == age)
     .map((element) => ({ name: element.name, email: element.email }));
