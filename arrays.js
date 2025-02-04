@@ -17,7 +17,6 @@ function each(elements, cb) {
   }
 }
 
-
 each(items, (num) => {
   console.log(num);
 });
@@ -30,8 +29,6 @@ function map(elements, cb) {
   }
   return data;
 }
-
-
 
 console.log(map(items, (num) => num * num));
 
@@ -51,9 +48,6 @@ function reduce(elements, cb, startingValue) {
   return accuater;
 }
 
-
-
-
 console.log(
   reduce(items, (n, sum) => {
     return (sum += n);
@@ -71,8 +65,6 @@ function find(elements, cb) {
   return undefined;
 }
 
-
-
 console.log(find(items, (x) => x == 5));
 
 // ========================= find =========================
@@ -87,21 +79,16 @@ function filter(elements, cb) {
   return arr;
 }
 
-
-
 console.log(
   filter(items, (n) => {
     return n % 2 == 0;
   })
 );
 
-
 // ========================= flatten array=============================
 const nestedArray = [1, [2], [[3]], [[[4]]]]; // use this to test 'flatten'
 
 function flatten(elements) {
-  
-
   // Flattens a nested array (the nesting can be to any depth).
   // Hint: You can solve this using recursion.
   // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
