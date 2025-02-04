@@ -23,7 +23,7 @@ const users = {
   Rob: {
     age: 34,
     desgination: "Senior Javascript Developer",
-    interest: ["Walking his dog, Cooking"],
+    interests: ["Walking his dog, Cooking"],
     qualification: "Masters",
     nationality: "USA",
   },
@@ -36,22 +36,4 @@ const users = {
   },
 };
 
-// /*
-
-// Q1 Find all users who are interested in playing video games.
-const data = users.filter(([key,value])=>{
-  return  value.age=="23"
-})
-//   .map((user) => {
-//     return user;
-//   })
-//   .filter((user) => {
-//     return user.age == 23;
-//   });
-console.log(data);
-
-// Q2 Find all users staying in Germany.
-// Q3 Find all users with masters Degree.
-// Q4 Group users based on their Programming language mentioned in their designation.
-
-// */
+export default users;
