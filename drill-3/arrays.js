@@ -84,13 +84,13 @@ function find(elements, cb) {
 
 console.log(find(items, (x) => x == 5));
 
-// ========================= find =========================
+// ========================= filter =========================
 
 function filter(elements, cb) {
   if(!Array.isArray(arr)){
     return "Not an Array"
   }
-  
+
   let arr = [];
   for (let i = 0; i < elements.length; i++) {
     if (cb(elements[i])) {
