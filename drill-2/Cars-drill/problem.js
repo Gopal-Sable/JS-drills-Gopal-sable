@@ -94,8 +94,8 @@ function carYears(cars) {
 
 function carsOlderthan(years, old) {
   const data = years.filter((year) => {
-    return year <= old;
-  });
+    return year < old;
+  }); 
   console.log(data, data.length);
 }
 // ==== Problem #6 ====

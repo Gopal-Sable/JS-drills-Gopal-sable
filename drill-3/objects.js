@@ -38,11 +38,19 @@ console.log(values(testObject));
 
 
 // ======================================================================
-function mapObject(obj, cb) {
-
-  // Like map for arrays, but for objects. Transform the value of each property in turn by passing it to the callback function.
-  // http://underscorejs.org/#mapObject
+function mapObject(obj, cb){ 
+    var _keys = keys(obj),
+        length = _keys.length,
+        results = {};
+    for (var index = 0; index < length; index++) {
+      var currentKey = _keys[index];
+      results[currentKey] = cb(obj[currentKey]);
+    }
+    return results;
 }
+
+console.log(mapObject(testObject,(x)=>x+5));
+
 // =============================================================================
 function pairs(obj) {
   const key=keys(obj);
@@ -73,11 +81,14 @@ console.log(invert(testObject));
 
 // ======================================================================================
 function defaults(obj, defaultProps) {
-
-  // Fill in undefined properties that match properties on the `defaultProps` parameter object.
-  // Return `obj`.
-  // http://underscorejs.org/#defaults
+  const _keys=keys(defaultProps);
+  for (let i = 0; i < _keys.length; i++) {  
+    if (obj[_keys[i]]==undefined) {
+      obj[_keys[i]]=defaultProps[_keys[i]]
+    }
+   ;
+  }
+ 
+  return obj;
 }
-
-
-console.log(defaults(testObject,0));
+console.log(defaults({'name':"gopal", 'company':"mountblue"},testObject));

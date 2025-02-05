@@ -9,9 +9,14 @@ const items = [1, 2, 3, 4, 5, 5]; // use this array to test your code.
     You CAN use concat, push, pop, etc. but do not use the exact method that you are replicating
 
 */
+// ====================== helper function ===========================
+
 // ==================== each =========================
 
 function each(elements, cb) {
+  if(!Array.isArray(arr)){
+    return "Not an Array"
+  }
   for (let i = 0; i < elements.length; i++) {
     cb(elements[i], i);
   }
@@ -23,6 +28,10 @@ each(items, (num) => {
 
 // ===================== map ==========================
 function map(elements, cb) {
+  if(!Array.isArray(arr)){
+    return "Not an Array"
+  } 
+
   let data = [];
   for (let i = 0; i < elements.length; i++) {
     data.push(cb(elements[i], i));
@@ -34,6 +43,10 @@ console.log(map(items, (num) => num * num));
 
 // =================== reduce =========================
 function reduce(elements, cb, startingValue) {
+  if(!Array.isArray(arr)){
+    return "Not an Array"
+  }
+
   let accuater = elements[0];
   if (startingValue != undefined) {
     accuater = startingValue;
@@ -57,6 +70,10 @@ console.log(
 // ========================= find =========================
 
 function find(elements, cb) {
+  if(!Array.isArray(arr)){
+    return "Not an Array"
+  }
+
   for (let i = 0; i < elements.length; i++) {
     if (cb(elements[i])) {
       return elements[i];
@@ -70,6 +87,10 @@ console.log(find(items, (x) => x == 5));
 // ========================= find =========================
 
 function filter(elements, cb) {
+  if(!Array.isArray(arr)){
+    return "Not an Array"
+  }
+  
   let arr = [];
   for (let i = 0; i < elements.length; i++) {
     if (cb(elements[i])) {
@@ -89,7 +110,15 @@ console.log(
 const nestedArray = [1, [2], [[3]], [[[4]]]]; // use this to test 'flatten'
 
 function flatten(elements) {
-  // Flattens a nested array (the nesting can be to any depth).
-  // Hint: You can solve this using recursion.
-  // Example: flatten([1, [2], [3, [[4]]]]); => [1, 2, 3, 4];
+  let result = [];
+  for (let i = 0; i < elements.length; i++) {
+    if (Array.isArray(elements[i])) {
+      result = result.concat(flatten(elements[i]));
+    } else {
+      result.push(elements[i]);
+    }
+  }
+  return result;
 }
+
+console.log("flat array", flatten(nestedArray));

@@ -6,8 +6,7 @@
 
 - arrays drill. 
 - objects drill.
+- closures drill.
 
 # Incomplete
-- arrays drill last question
-- closures drill
-- objects drill 2 questions remainig.
+- no for now
