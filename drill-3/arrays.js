@@ -14,7 +14,7 @@ const items = [1, 2, 3, 4, 5, 5]; // use this array to test your code.
 // ==================== each =========================
 
 function each(elements, cb) {
-  if(!Array.isArray(arr)){
+  if(!Array.isArray(elements)){
     return "Not an Array"
   }
   for (let i = 0; i < elements.length; i++) {
@@ -28,7 +28,7 @@ each(items, (num) => {
 
 // ===================== map ==========================
 function map(elements, cb) {
-  if(!Array.isArray(arr)){
+  if(!Array.isArray(elements)){
     return "Not an Array"
   } 
 
@@ -43,7 +43,7 @@ console.log(map(items, (num) => num * num));
 
 // =================== reduce =========================
 function reduce(elements, cb, startingValue) {
-  if(!Array.isArray(arr)){
+  if(!Array.isArray(elements)){
     return "Not an Array"
   }
 
@@ -70,7 +70,7 @@ console.log(
 // ========================= find =========================
 
 function find(elements, cb) {
-  if(!Array.isArray(arr)){
+  if(!Array.isArray(elements)){
     return "Not an Array"
   }
 
@@ -87,7 +87,7 @@ console.log(find(items, (x) => x == 5));
 // ========================= filter =========================
 
 function filter(elements, cb) {
-  if(!Array.isArray(arr)){
+  if(!Array.isArray(elements)){
     return "Not an Array"
   }
 
