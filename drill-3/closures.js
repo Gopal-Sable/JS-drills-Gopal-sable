@@ -43,7 +43,7 @@ console.log(fn("gopal"));
 function cacheFunction(cb) {
   let mem={};
   return (...args) => {
-    let key=JSON.stringify(...args);
+    let key=JSON.stringify([...args]);    
     if(mem[key]!=null){
      return mem[key];
     }
@@ -56,6 +56,6 @@ function add(a,b) {
 }
 let fn1 = cacheFunction(add);
 console.log(fn1(1,2));
-console.log(fn1(1,2));
+console.log(fn1(1,3));
 
 

@@ -107,6 +107,5 @@ function carsOfBrands(arr, brand1, brand2) {
   console.log(JSON.stringify(brands));
 }
 
-carsOfBrands(inventory, "Audi", "BMW");
 
-export { carOfId, lastCar, sortCarsAlphabetically, carYears, carsOlderthan };
+export { carOfId, lastCar, sortCarsAlphabetically, carYears, carsOlderthan,carsOfBrands };
