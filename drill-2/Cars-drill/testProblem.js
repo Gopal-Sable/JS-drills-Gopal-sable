@@ -37,8 +37,10 @@ sortCarsAlphabetically("sajnd");
 
 console.log("====================problem 4=========================");
 console.log(carYears(inventory));
+
+console.log("====================problem 5=========================");
 carsOlderthan(carYears(inventory), 2000);
 
 
-console.log("====================problem 5=========================");
+console.log("====================problem 6=========================");
 carsOfBrands(inventory, "Audi", "BMW");

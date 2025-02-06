@@ -66,7 +66,7 @@ function getGroupsByProgram(users) {
         if (!data[language]) {
           data[language] = [];
         }
-        data[language].push(users[user]);
+        data[language].push(user);
       }
     });
   }
