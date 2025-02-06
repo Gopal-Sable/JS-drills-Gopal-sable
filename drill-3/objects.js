@@ -44,12 +44,12 @@ function mapObject(obj, cb){
         results = {};
     for (var index = 0; index < length; index++) {
       var currentKey = _keys[index];
-      results[currentKey] = cb(obj[currentKey]);
+      results[currentKey] = cb(obj[currentKey],currentKey);
     }
     return results;
 }
 
-console.log(mapObject(testObject,(x)=>x+5));
+console.log(mapObject(testObject,(x,y)=>x+y));
 
 // =============================================================================
 function pairs(obj) {
